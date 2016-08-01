@@ -68,9 +68,8 @@ class StudentController extends Controller
      */
     public function edit(Student $student)
     {
-        return view('students.edit', [
-            'student' => $student
-        ]);
+        $courses = Course::lists('name','id');
+        return view('students.edit', ['student' => $student], compact('courses'));
     }
 
     /**

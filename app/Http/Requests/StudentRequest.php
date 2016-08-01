@@ -13,7 +13,7 @@ class StudentRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,7 +25,9 @@ class StudentRequest extends Request
     {
         return [
             'identification' => 'required|unique:students|min:7|max:11',
-            'course_id' => 'required',
+            'first_name'     => 'required|max:100',
+            'last_name'      => 'required|max:100',
+            'course_id'      => 'required',
         ];
     }
 }

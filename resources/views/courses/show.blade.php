@@ -47,7 +47,7 @@
 									@foreach($course->students as $student)
 										<tr>
 											<td>{{ $student->identification }}</td>
-											<td>{{ $student->name }}</td>
+											<td>{{ $student->first_name .' '.$student->last_name }}</td>
 											<td>{{ $student->gender }}</td>
 										</tr>
 									@endforeach

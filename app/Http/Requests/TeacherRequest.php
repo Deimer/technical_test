@@ -13,7 +13,7 @@ class TeacherRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,6 +25,8 @@ class TeacherRequest extends Request
     {
         return [
             'identification' => 'required|unique:teachers|min:7|max:11',
+            'first_name'     => 'required|max:100',
+            'last_name'      => 'required|max:100',
         ];
     }
 }

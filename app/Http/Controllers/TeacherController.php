@@ -38,7 +38,7 @@ class TeacherController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StudentRequest $request)
+    public function store(TeacherRequest $request)
     {
         $teacher = Teacher::create($request->all());
         return redirect('/teacher')->with('success', 'Docente almacenado correctamente.');

@@ -24,6 +24,9 @@
 					{!! Form::label('gender', 'Genero:') !!}<p>
 					{!! Form::select('gender', array('Femenino' => 'Femenino', 'Masculino' => 'Masculino')) !!}<br/>
 
+					{!! Form::label('course_id', 'Docente encargado:') !!}<p>
+					{!! Form::select('course_id', $courses) !!}<br/>
+
 					<br/>
 					{!! Form::submit('Editar', ['class' => 'btn btn-primary']) !!}
 
